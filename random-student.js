@@ -2,12 +2,16 @@
 add everyones name in it
 ramdomly pick somoene name
  */
-const myArr = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
+const students = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
 
-console.log(myArr[10].length);//itsa property because it does not have ()
-
-const studnetsObj = {
-  "0": "test" //you cannot use bracket notation when you use a string as a key?
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
+//console.log(Math.random() * 1000);
+
+console.log(students[getRandomInt(0, students.length - 1)]);
 
